@@ -1,23 +1,22 @@
 <div>
     <section>        
         <br/>
-        <input
-         
-        (keyup)="onGradeKey($event)" 
+        <input         
+        (change)="onGradeKey($event)" 
          type="number" 
         value={{handleChangeGrades()}}
+        [(ngModel)]="this.C"
         >
         
     </section>
     <br/>
     <section>        
         <br/>
-        <input
-        
-        (keyup)="onFarenheitKey($event)" 
-        
+        <input        
+        (keyup)="onFarenheitKey($event)"         
         type="number" 
         value={{handleChangeFarenheit()}}
+        [(ngModel)]="this.F"
         >        
     </section>
 

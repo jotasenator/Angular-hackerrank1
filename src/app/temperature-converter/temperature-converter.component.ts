@@ -19,6 +19,12 @@ export class TemperatureConverterComponent implements OnInit {
   onFarenheitKey(event: any) {
     this.F = event.target.value;
   }
+  handleChangeGrades = () => (
+    ((+(this.F) - 32) * 5 / 9).toFixed(1)
+  )
+  handleChangeFarenheit = () => (
+    (+(this.C) * 9 / 5 + 32).toFixed(1)
+  )
 
 
   constructor() {
@@ -26,16 +32,4 @@ export class TemperatureConverterComponent implements OnInit {
   }
 
   ngOnInit(): void { }
-
-  handleChangeGrades = () => (
-
-    ((+(this.F) - 32) * 5 / 9).toFixed(1)
-  )
-  handleChangeFarenheit = () => (
-
-
-    (+(this.C) * 9 / 5 + 32).toFixed(1)
-  )
-
-
 }
