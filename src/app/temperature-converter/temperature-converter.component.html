@@ -13,7 +13,7 @@
     <section>        
         <br/>
         <input        
-        (keyup)="onFarenheitKey($event)"         
+        (change)="onFarenheitKey($event)"         
         type="number" 
         value={{handleChangeFarenheit()}}
         [(ngModel)]="this.F"
